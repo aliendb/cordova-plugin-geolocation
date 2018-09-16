@@ -88,7 +88,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 </feature>
         </config-file>
       
-      <!-- The app is able to run in background through audio background mode -->
+      <!-- The app is able to run in background through background mode -->
 		 <config-file target="*-Info.plist" parent="UIBackgroundModes">
 			 <array>
 				 <string>location</string>
