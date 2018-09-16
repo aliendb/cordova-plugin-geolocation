@@ -88,12 +88,12 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 </feature>
         </config-file>
       
-      <!-- The app is able to run in background through background mode -->
-		 <config-file target="*-Info.plist" parent="UIBackgroundModes">
-			 <array>
-				 <string>location</string>
-			 </array>
-		 </config-file>
+	<config-file target="*-Info.plist" parent="UIBackgroundModes">
+		<array>
+			<string>audio</string>
+			<string>location</string>
+		</array>
+	</config-file>
       
         <header-file src="src/ios/CDVLocation.h" />
         <source-file src="src/ios/CDVLocation.m" />
