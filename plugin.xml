@@ -94,6 +94,18 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 			<string>location</string>
 		</array>
 	</config-file>
+	    
+	<!-- required background modes:  App registers for location updates -->
+        <preference name="ALWAYS_USAGE_DESCRIPTION" default="This app always requires location tracking" />
+         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+            <string>$ALWAYS_USAGE_DESCRIPTION</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            <string>$ALWAYS_USAGE_DESCRIPTION</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
+            <string>$ALWAYS_USAGE_DESCRIPTION</string>
+        </config-file>
       
         <header-file src="src/ios/CDVLocation.h" />
         <source-file src="src/ios/CDVLocation.m" />
