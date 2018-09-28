@@ -139,6 +139,12 @@
     // not dealing with setting location back on if system turns it off so set this to NO (aliendb edit)
     self.locationManager.pausesLocationUpdatesAutomatically = NO;
  
+ //iOS 11 supports a bar to indicate background location updates.  set to yes.. should really be based on options and not hard-coded.
+#ifdef __IPHONE_11_0
+   if(@available(iOS 11.0, *)){
+       self.locationManager.showsBackgroundLocationIndicator=YES;
+   }
+#endif 
  
     // Tell the location manager to start notifying us of location updates. We
     // first stop, and then start the updating to ensure we get at least one
