@@ -1,4 +1,10 @@
 ---
+iOS version updated. 
+---
+Modified to work with background location iOS 11
+
+
+---
 title: Geolocation
 description: Access GPS data.
 ---
