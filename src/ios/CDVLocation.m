@@ -131,9 +131,15 @@
     }
 #endif
     
+    // needed for location in the background (aliendb edit)
     if ([self.locationManager respondsToSelector:@selector(setAllowsBackgroundLocationUpdates:)]) {
             [self.locationManager setAllowsBackgroundLocationUpdates:YES];
     }
+ 
+    // not dealing with setting location back on if system turns it off so set this to NO (aliendb edit)
+    self.locationManager.pausesLocationUpdatesAutomatically = NO;
+ 
+ 
     // Tell the location manager to start notifying us of location updates. We
     // first stop, and then start the updating to ensure we get at least one
     // update, even if our location did not change.
